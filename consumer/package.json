@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/dexter0175/kyma-lambda-demo#readme",
   "dependencies": {
-    "node-telegram-api": "^0.4.0"
+    "node-telegram-bot-api": "^0.57.0"
   }
 }
