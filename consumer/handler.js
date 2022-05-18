@@ -6,7 +6,14 @@ module.exports = {
     console.log(event);
     const tgBot = new TelegramBot(token, {polling: true});
 
-    await tgBot.sendMessage(640902100, JSON.stringify(event, null, 2));
+    await tgBot.sendMessage(640902100, JSON.stringify({
+      'ce-type': event['ce-type'],
+      'ce-source': event['ce-source'],
+      'ce-eventtypeversion': event['ce-eventtypeversion'],
+      'ce-specversion': event['ce-specversion'],
+      'ce-id': event['ce-id'],
+      'ce-time': event['ce-time'],
+    }, null, 2));
 
     return "Hello World from Kyma Serverless!";
   },
